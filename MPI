@@ -1,0 +1,15 @@
+Message Passing Interface
+
+MPI_Init
+Takes the command line arguments to a program, checks for any MPI options, and passes remaining command line arguments to the main program.
+
+MPI_Comm_size
+Determines the size of a given MPI Communicator. A communicator is a set of processes that work together. For typical programs this is the default MPI_COMM_WORLD, which is the communicator for all processes available to an MPI program.
+
+MPI_Comm_rank( MPI_Comm comm, int *rank )
+Determine the rank of the current process within a communicator. Typically, if a MPI program is being run on N processes, the communicator would be MPI_COMM_WORLD, and the rank would be an integer from 0 to N-1. 
+
+MPI_Finalize()
+Handles anything that the current MPI protocol will need to do before exiting a program. Typically should be the final or near final line of a program. 
+
+Current version: Open MPI 4.0
